@@ -186,8 +186,8 @@ create_datareader(
   //! ```
   //! 다만 `eprosima::fastdds::dds::StatusMask::subscription_matched()`의 반환은 const이기 때문에 | 연산이 불가능하여 mask객체를 만들어 const를 벗겨내어 적용 하였다. 
 
-  eprosima::fastdds::dds::StatusMask mask = eprosima::fastdds::dds::StatusMask::subscription_matched();
-  mask |= eprosima::fastdds::dds::StatusMask::data_available();
+  eprosima::fastdds::dds::StatusMask mask = eprosima::fastdds::dds::StatusMask::all();
+  // mask |= eprosima::fastdds::dds::StatusMask::data_available();
   eprosima::fastdds::dds::DataReaderQos updated_qos = datareader_qos;
   switch (subscription_options->require_unique_network_flow_endpoints) {
     default:

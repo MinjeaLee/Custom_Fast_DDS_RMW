@@ -1,0 +1,60 @@
+In file included from [01m[K/home/leeminjea/ros2_rmw_ws/src/rmw_fastrtps/rmw_fastrtps_shared_cpp/src/custom_subscriber_info.cpp:15[m[K:
+[01m[K/home/leeminjea/ros2_rmw_ws/src/rmw_fastrtps/rmw_fastrtps_shared_cpp/include/rmw_fastrtps_shared_cpp/custom_subscriber_info.hpp:[m[K In member function ‘[01m[Kvirtual void SubListener::on_subscription_matched(eprosima::fastdds::dds::DataReader*, const eprosima::fastdds::dds::SubscriptionMatchedStatus&)[m[K’:
+[01m[K/home/leeminjea/ros2_rmw_ws/src/rmw_fastrtps/rmw_fastrtps_shared_cpp/include/rmw_fastrtps_shared_cpp/custom_subscriber_info.hpp:100:42:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kreader[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  100 |     [01;35m[Keprosima::fastdds::dds::DataReader * reader[m[K,
+      |     [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~[m[K
+In file included from [01m[K/home/leeminjea/ros2_rmw_ws/src/rmw_fastrtps/rmw_fastrtps_shared_cpp/include/rmw_fastrtps_shared_cpp/utils.hpp:27[m[K,
+                 from [01m[K/home/leeminjea/ros2_rmw_ws/src/rmw_fastrtps/rmw_fastrtps_shared_cpp/src/participant.cpp:45[m[K:
+[01m[K/home/leeminjea/ros2_rmw_ws/src/rmw_fastrtps/rmw_fastrtps_shared_cpp/include/rmw_fastrtps_shared_cpp/custom_subscriber_info.hpp:[m[K In member function ‘[01m[Kvirtual void SubListener::on_subscription_matched(eprosima::fastdds::dds::DataReader*, const eprosima::fastdds::dds::SubscriptionMatchedStatus&)[m[K’:
+[01m[K/home/leeminjea/ros2_rmw_ws/src/rmw_fastrtps/rmw_fastrtps_shared_cpp/include/rmw_fastrtps_shared_cpp/custom_subscriber_info.hpp:100:42:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kreader[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  100 |     [01;35m[Keprosima::fastdds::dds::DataReader * reader[m[K,
+      |     [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~[m[K
+In file included from [01m[K/home/leeminjea/ros2_rmw_ws/src/rmw_fastrtps/rmw_fastrtps_shared_cpp/include/rmw_fastrtps_shared_cpp/utils.hpp:27[m[K,
+                 from [01m[K/home/leeminjea/ros2_rmw_ws/src/rmw_fastrtps/rmw_fastrtps_shared_cpp/src/publisher.cpp:23[m[K:
+[01m[K/home/leeminjea/ros2_rmw_ws/src/rmw_fastrtps/rmw_fastrtps_shared_cpp/include/rmw_fastrtps_shared_cpp/custom_subscriber_info.hpp:[m[K In member function ‘[01m[Kvirtual void SubListener::on_subscription_matched(eprosima::fastdds::dds::DataReader*, const eprosima::fastdds::dds::SubscriptionMatchedStatus&)[m[K’:
+[01m[K/home/leeminjea/ros2_rmw_ws/src/rmw_fastrtps/rmw_fastrtps_shared_cpp/include/rmw_fastrtps_shared_cpp/custom_subscriber_info.hpp:100:42:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kreader[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  100 |     [01;35m[Keprosima::fastdds::dds::DataReader * reader[m[K,
+      |     [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~[m[K
+In file included from [01m[K/home/leeminjea/ros2_rmw_ws/src/rmw_fastrtps/rmw_fastrtps_shared_cpp/include/rmw_fastrtps_shared_cpp/utils.hpp:27[m[K,
+                 from [01m[K/home/leeminjea/ros2_rmw_ws/src/rmw_fastrtps/rmw_fastrtps_shared_cpp/src/rmw_client.cpp:31[m[K:
+[01m[K/home/leeminjea/ros2_rmw_ws/src/rmw_fastrtps/rmw_fastrtps_shared_cpp/include/rmw_fastrtps_shared_cpp/custom_subscriber_info.hpp:[m[K In member function ‘[01m[Kvirtual void SubListener::on_subscription_matched(eprosima::fastdds::dds::DataReader*, const eprosima::fastdds::dds::SubscriptionMatchedStatus&)[m[K’:
+[01m[K/home/leeminjea/ros2_rmw_ws/src/rmw_fastrtps/rmw_fastrtps_shared_cpp/include/rmw_fastrtps_shared_cpp/custom_subscriber_info.hpp:100:42:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kreader[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  100 |     [01;35m[Keprosima::fastdds::dds::DataReader * reader[m[K,
+      |     [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~[m[K
+In file included from [01m[K/home/leeminjea/ros2_rmw_ws/src/rmw_fastrtps/rmw_fastrtps_shared_cpp/src/rmw_get_endpoint_network_flow.cpp:20[m[K:
+[01m[K/home/leeminjea/ros2_rmw_ws/src/rmw_fastrtps/rmw_fastrtps_shared_cpp/include/rmw_fastrtps_shared_cpp/custom_subscriber_info.hpp:[m[K In member function ‘[01m[Kvirtual void SubListener::on_subscription_matched(eprosima::fastdds::dds::DataReader*, const eprosima::fastdds::dds::SubscriptionMatchedStatus&)[m[K’:
+[01m[K/home/leeminjea/ros2_rmw_ws/src/rmw_fastrtps/rmw_fastrtps_shared_cpp/include/rmw_fastrtps_shared_cpp/custom_subscriber_info.hpp:100:42:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kreader[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  100 |     [01;35m[Keprosima::fastdds::dds::DataReader * reader[m[K,
+      |     [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~[m[K
+In file included from [01m[K/home/leeminjea/ros2_rmw_ws/src/rmw_fastrtps/rmw_fastrtps_shared_cpp/include/rmw_fastrtps_shared_cpp/utils.hpp:27[m[K,
+                 from [01m[K/home/leeminjea/ros2_rmw_ws/src/rmw_fastrtps/rmw_fastrtps_shared_cpp/src/rmw_service.cpp:43[m[K:
+[01m[K/home/leeminjea/ros2_rmw_ws/src/rmw_fastrtps/rmw_fastrtps_shared_cpp/include/rmw_fastrtps_shared_cpp/custom_subscriber_info.hpp:[m[K In member function ‘[01m[Kvirtual void SubListener::on_subscription_matched(eprosima::fastdds::dds::DataReader*, const eprosima::fastdds::dds::SubscriptionMatchedStatus&)[m[K’:
+[01m[K/home/leeminjea/ros2_rmw_ws/src/rmw_fastrtps/rmw_fastrtps_shared_cpp/include/rmw_fastrtps_shared_cpp/custom_subscriber_info.hpp:100:42:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kreader[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  100 |     [01;35m[Keprosima::fastdds::dds::DataReader * reader[m[K,
+      |     [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~[m[K
+In file included from [01m[K/home/leeminjea/ros2_rmw_ws/src/rmw_fastrtps/rmw_fastrtps_shared_cpp/src/rmw_subscription.cpp:29[m[K:
+[01m[K/home/leeminjea/ros2_rmw_ws/src/rmw_fastrtps/rmw_fastrtps_shared_cpp/include/rmw_fastrtps_shared_cpp/custom_subscriber_info.hpp:[m[K In member function ‘[01m[Kvirtual void SubListener::on_subscription_matched(eprosima::fastdds::dds::DataReader*, const eprosima::fastdds::dds::SubscriptionMatchedStatus&)[m[K’:
+[01m[K/home/leeminjea/ros2_rmw_ws/src/rmw_fastrtps/rmw_fastrtps_shared_cpp/include/rmw_fastrtps_shared_cpp/custom_subscriber_info.hpp:100:42:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kreader[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  100 |     [01;35m[Keprosima::fastdds::dds::DataReader * reader[m[K,
+      |     [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~[m[K
+In file included from [01m[K/home/leeminjea/ros2_rmw_ws/src/rmw_fastrtps/rmw_fastrtps_shared_cpp/src/rmw_take.cpp:31[m[K:
+[01m[K/home/leeminjea/ros2_rmw_ws/src/rmw_fastrtps/rmw_fastrtps_shared_cpp/include/rmw_fastrtps_shared_cpp/custom_subscriber_info.hpp:[m[K In member function ‘[01m[Kvirtual void SubListener::on_subscription_matched(eprosima::fastdds::dds::DataReader*, const eprosima::fastdds::dds::SubscriptionMatchedStatus&)[m[K’:
+[01m[K/home/leeminjea/ros2_rmw_ws/src/rmw_fastrtps/rmw_fastrtps_shared_cpp/include/rmw_fastrtps_shared_cpp/custom_subscriber_info.hpp:100:42:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kreader[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  100 |     [01;35m[Keprosima::fastdds::dds::DataReader * reader[m[K,
+      |     [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~[m[K
+In file included from [01m[K/home/leeminjea/ros2_rmw_ws/src/rmw_fastrtps/rmw_fastrtps_shared_cpp/src/rmw_wait.cpp:22[m[K:
+[01m[K/home/leeminjea/ros2_rmw_ws/src/rmw_fastrtps/rmw_fastrtps_shared_cpp/include/rmw_fastrtps_shared_cpp/custom_subscriber_info.hpp:[m[K In member function ‘[01m[Kvirtual void SubListener::on_subscription_matched(eprosima::fastdds::dds::DataReader*, const eprosima::fastdds::dds::SubscriptionMatchedStatus&)[m[K’:
+[01m[K/home/leeminjea/ros2_rmw_ws/src/rmw_fastrtps/rmw_fastrtps_shared_cpp/include/rmw_fastrtps_shared_cpp/custom_subscriber_info.hpp:100:42:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kreader[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  100 |     [01;35m[Keprosima::fastdds::dds::DataReader * reader[m[K,
+      |     [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~[m[K
+In file included from [01m[K/home/leeminjea/ros2_rmw_ws/src/rmw_fastrtps/rmw_fastrtps_shared_cpp/src/subscription.cpp:23[m[K:
+[01m[K/home/leeminjea/ros2_rmw_ws/src/rmw_fastrtps/rmw_fastrtps_shared_cpp/include/rmw_fastrtps_shared_cpp/custom_subscriber_info.hpp:[m[K In member function ‘[01m[Kvirtual void SubListener::on_subscription_matched(eprosima::fastdds::dds::DataReader*, const eprosima::fastdds::dds::SubscriptionMatchedStatus&)[m[K’:
+[01m[K/home/leeminjea/ros2_rmw_ws/src/rmw_fastrtps/rmw_fastrtps_shared_cpp/include/rmw_fastrtps_shared_cpp/custom_subscriber_info.hpp:100:42:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kreader[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  100 |     [01;35m[Keprosima::fastdds::dds::DataReader * reader[m[K,
+      |     [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~[m[K
+In file included from [01m[K/home/leeminjea/ros2_rmw_ws/src/rmw_fastrtps/rmw_fastrtps_shared_cpp/include/rmw_fastrtps_shared_cpp/utils.hpp:27[m[K,
+                 from [01m[K/home/leeminjea/ros2_rmw_ws/src/rmw_fastrtps/rmw_fastrtps_shared_cpp/src/utils.cpp:19[m[K:
+[01m[K/home/leeminjea/ros2_rmw_ws/src/rmw_fastrtps/rmw_fastrtps_shared_cpp/include/rmw_fastrtps_shared_cpp/custom_subscriber_info.hpp:[m[K In member function ‘[01m[Kvirtual void SubListener::on_subscription_matched(eprosima::fastdds::dds::DataReader*, const eprosima::fastdds::dds::SubscriptionMatchedStatus&)[m[K’:
+[01m[K/home/leeminjea/ros2_rmw_ws/src/rmw_fastrtps/rmw_fastrtps_shared_cpp/include/rmw_fastrtps_shared_cpp/custom_subscriber_info.hpp:100:42:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kreader[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  100 |     [01;35m[Keprosima::fastdds::dds::DataReader * reader[m[K,
+      |     [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~[m[K
