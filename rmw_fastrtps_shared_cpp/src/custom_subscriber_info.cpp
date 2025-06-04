@@ -246,6 +246,7 @@ SubListener::on_requested_deadline_missed(
   eprosima::fastdds::dds::DataReader *,
   const eprosima::fastdds::dds::RequestedDeadlineMissedStatus & status)
 {
+  //! 로그 출력 부 추가
   std::cout << "[RMW][FastRTPS] SubListener::on_requested_deadline_missed(): "
             << "total_count=" << status.total_count
             << ", total_count_change=" << status.total_count_change
@@ -271,6 +272,7 @@ void SubListener::on_liveliness_changed(
   eprosima::fastdds::dds::DataReader *,
   const eprosima::fastdds::dds::LivelinessChangedStatus & status)
 {
+  //! 로그 출력 부 추가
   std::cout << "[RMW][FastRTPS] SubListener::on_liveliness_changed(): "
             << "alive_count=" << status.alive_count
             << ", not_alive_count=" << status.not_alive_count
@@ -299,6 +301,7 @@ void SubListener::on_sample_lost(
   eprosima::fastdds::dds::DataReader *,
   const eprosima::fastdds::dds::SampleLostStatus & status)
 {
+  //! 로그 출력 부 추가
   std::cout << "[RMW][FastRTPS] SubListener::on_sample_lost(): "
             << "total_count=" << status.total_count
             << ", total_count_change=" << status.total_count_change
@@ -323,6 +326,7 @@ void SubListener::on_requested_incompatible_qos(
   eprosima::fastdds::dds::DataReader *,
   const eprosima::fastdds::dds::RequestedIncompatibleQosStatus & status)
 {
+  //! 로그 출력 부 추가
   std::cout << "[RMW][FastRTPS] SubListener::on_requested_incompatible_qos(): "
             << "last_policy_id=" << status.last_policy_id
             << ", total_count=" << status.total_count

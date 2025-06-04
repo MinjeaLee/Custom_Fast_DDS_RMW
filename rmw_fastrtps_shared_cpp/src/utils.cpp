@@ -173,6 +173,19 @@ create_datareader(
   eprosima::fastdds::dds::DataReader ** data_reader
 )
 {
+  //! 기존 로직대로 라면 subscription_matched 밖에 로그가 출력되지 않음
+  //! 그러한 이유는 StatusMask가 `subscription_matched()`만 masking 되어 있기 때문이다.
+  //! 따라 data_available또한 Masking 해주어야 data_available 또한 로깅이 가능할 것이다.
+  //! 기존에는 mask인스턴스를 만들지 않고 다음과 같이 되어 있다. (LN : 214, LN : 223)
+  //! ```
+  //!  *data_reader = subscriber->create_datareader(
+  //!    des_topic,
+  //!    updated_qos,
+  //!    listener,
+  //!    eprosima::fastdds::dds::StatusMask::subscription_matched());
+  //! ```
+  //! 다만 `eprosima::fastdds::dds::StatusMask::subscription_matched()`의 반환은 const이기 때문에 | 연산이 불가능하여 mask객체를 만들어 const를 벗겨내어 적용 하였다. 
+
   eprosima::fastdds::dds::StatusMask mask = eprosima::fastdds::dds::StatusMask::subscription_matched();
   mask |= eprosima::fastdds::dds::StatusMask::data_available();
   eprosima::fastdds::dds::DataReaderQos updated_qos = datareader_qos;

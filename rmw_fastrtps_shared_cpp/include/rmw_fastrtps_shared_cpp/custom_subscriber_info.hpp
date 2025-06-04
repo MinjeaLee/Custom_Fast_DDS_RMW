@@ -100,6 +100,7 @@ public:
     eprosima::fastdds::dds::DataReader * reader,
     const eprosima::fastdds::dds::SubscriptionMatchedStatus & info) final
   {
+    //! 로그 출력 부 추가
     std::cout << "[RMW][FastRTPS] SubListener::on_subscription_matched(): "
             << "current_count_change=" << info.current_count_change
             << ", total_count=" << info.total_count
@@ -118,6 +119,7 @@ public:
   on_data_available(
     eprosima::fastdds::dds::DataReader * reader) final
   {
+    //! 로그 출력 부 추가
     std::cout << "[RMW][FastRTPS] SubListener::on_data_available()" << reader << std::endl;
     std::unique_lock<std::mutex> lock_mutex(on_new_message_m_);
 
@@ -125,6 +127,7 @@ public:
       auto unread_messages = get_unread_messages();
 
       if (0 < unread_messages) {
+        //! 로그 출력 부 추가
         std::cout << "[RMW][FastRTPS]   -> unread_messages=" << unread_messages << std::endl;
         on_new_message_cb_(new_message_user_data_, unread_messages);
       }
