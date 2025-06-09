@@ -72,7 +72,7 @@ public:
       auto now = std::chrono::system_clock::now();
       auto time_t = std::chrono::system_clock::to_time_t(now);
       std::stringstream ss;
-      ss << "/tmp/fast_listener.log" 
+      ss << "/tmp/fast_listener.log";
       log_path_ = ss.str();
     }
     
@@ -100,7 +100,7 @@ public:
       log_file_.flush(); // 즉시 디스크에 쓰기
     }
     
-    콘솔에도 출력 (디버깅용)
+    //콘솔에도 출력 (디버깅용)
     std::cout << message << std::endl;
   }
   
