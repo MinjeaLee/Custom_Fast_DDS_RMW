@@ -45,6 +45,77 @@
 
 #include "rmw_fastrtps_shared_cpp/custom_event_info.hpp"
 
+//! 로그 작성 위한 헤더 추가가
+#include <fstream>
+#include <chrono>
+#include <iomanip>
+#include <sstream>
+
+
+class FastDDSLogger {
+private:
+  static std::ofstream log_file_;
+  static std::mutex log_mutex_;
+  static bool initialized_;
+  static std::string log_path_;
+
+public:
+  static void initialize() {
+    if (initialized_) return;
+    
+    // 환경변수에서 로그 경로 가져오기
+    const char* env_path = std::getenv("RMW_FASTDDS_LOG_PATH");
+    if (env_path) {
+      log_path_ = std::string(env_path);
+    } else {
+      // 기본 경로: /tmp/rmw_fastdds_<timestamp>.log
+      auto now = std::chrono::system_clock::now();
+      auto time_t = std::chrono::system_clock::to_time_t(now);
+      std::stringstream ss;
+      ss << "/tmp/fast_listener.log" 
+      log_path_ = ss.str();
+    }
+    
+    log_file_.open(log_path_, std::ios::out | std::ios::app);
+    auto now = std::chrono::system_clock::now();
+    auto t = std::chrono::system_clock::to_time_t(now);
+    if (log_file_.is_open()) {
+      initialized_ = true;
+    } else {
+      std::cerr << "[RMW][FastRTPS] Failed to open log file: " << log_path_ << std::endl;
+    }
+  }
+  
+  static void log(const std::string& message) {
+    if (!initialized_) initialize();
+    
+    std::lock_guard<std::mutex> lock(log_mutex_);
+    if (log_file_.is_open()) {
+      auto now = std::chrono::system_clock::now();
+      auto ms = std::chrono::duration_cast<std::chrono::milliseconds>(now.time_since_epoch()) % 1000;
+      auto time_t = std::chrono::system_clock::to_time_t(now);
+      
+      log_file_  << std::put_time(std::localtime(&time_t), "%Y-%m-%d %H:%M:%S") << " ";
+      log_file_ << message << std::endl;
+      log_file_.flush(); // 즉시 디스크에 쓰기
+    }
+    
+    콘솔에도 출력 (디버깅용)
+    std::cout << message << std::endl;
+  }
+  
+  static void close() {
+    std::lock_guard<std::mutex> lock(log_mutex_);
+    if (log_file_.is_open()) {
+      log_file_.close();
+    }
+    initialized_ = false;
+  }
+  
+  static std::string get_log_path() {
+    return log_path_;
+  }
+};
 
 class SubListener;
 
@@ -100,11 +171,9 @@ public:
     eprosima::fastdds::dds::DataReader * reader,
     const eprosima::fastdds::dds::SubscriptionMatchedStatus & info) final
   {
-    //! 로그 출력 부 추가
-    std::cout << "[RMW][FastRTPS] SubListener::on_subscription_matched(): "
-            << "current_count_change=" << info.current_count_change
-            << ", total_count=" << info.total_count
-            << ", last_publication_handle=" << info.last_publication_handle << std::endl;
+    std::stringstream ss;
+    ss << "subscription_matched";
+    FastDDSLogger::log(ss.str());
     {
       std::lock_guard<std::mutex> lock(discovery_m_);
       if (info.current_count_change == 1) {
@@ -119,24 +188,21 @@ public:
   on_data_available(
     eprosima::fastdds::dds::DataReader * reader) final
   {
+    std::stringstream ss;
     //! 로그 출력 부 추가
-    std::cout << "[RMW][FastRTPS] on_data_available(), reader ptr=" << reader;
+    ss << "data_available, ";
     auto topic_desc = reader->get_topicdescription();
     if (topic_desc) {
-      std::cout << ", topic=\"" << topic_desc->get_name() << "\"";
+      ss << topic_desc->get_name();
     }
-    size_t unread = reader->get_unread_count(true);
-    std::cout << ", unread_messages=" << unread;
 
-    std::cout << std::endl;
+    FastDDSLogger::log(ss.str());
     std::unique_lock<std::mutex> lock_mutex(on_new_message_m_);
 
     if (on_new_message_cb_) {
       auto unread_messages = get_unread_messages();
 
       if (0 < unread_messages) {
-        //! 로그 출력 부 추가
-        std::cout << "[RMW][FastRTPS]   -> unread_messages=" << unread_messages << std::endl;
         on_new_message_cb_(new_message_user_data_, unread_messages);
       }
     }
@@ -236,5 +302,7 @@ private:
 
   std::mutex discovery_m_;
 };
+
+
 
 #endif  // RMW_FASTRTPS_SHARED_CPP__CUSTOM_SUBSCRIBER_INFO_HPP_

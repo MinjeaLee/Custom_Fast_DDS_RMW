@@ -186,8 +186,14 @@ create_datareader(
   //! ```
   //! 다만 `eprosima::fastdds::dds::StatusMask::subscription_matched()`의 반환은 const이기 때문에 | 연산이 불가능하여 mask객체를 만들어 const를 벗겨내어 적용 하였다. 
 
-  eprosima::fastdds::dds::StatusMask mask = eprosima::fastdds::dds::StatusMask::all();
-  // mask |= eprosima::fastdds::dds::StatusMask::data_available();
+  eprosima::fastdds::dds::StatusMask status_mask;
+  status_mask |= eprosima::fastdds::dds::StatusMask::subscription_matched();
+  status_mask |= eprosima::fastdds::dds::StatusMask::data_available();
+  status_mask |= eprosima::fastdds::dds::StatusMask::liveliness_changed();
+  status_mask |= eprosima::fastdds::dds::StatusMask::requested_deadline_missed();
+  status_mask |= eprosima::fastdds::dds::StatusMask::requested_incompatible_qos();
+  status_mask |= eprosima::fastdds::dds::StatusMask::sample_lost();
+  status_mask |= eprosima::fastdds::dds::StatusMask::sample_rejected();
   eprosima::fastdds::dds::DataReaderQos updated_qos = datareader_qos;
   switch (subscription_options->require_unique_network_flow_endpoints) {
     default:
@@ -215,7 +221,7 @@ create_datareader(
     des_topic,
     updated_qos,
     listener,
-    mask);
+    status_mask);
   if (!data_reader &&
     (RMW_UNIQUE_NETWORK_FLOW_ENDPOINTS_OPTIONALLY_REQUIRED ==
     subscription_options->require_unique_network_flow_endpoints))
@@ -224,7 +230,7 @@ create_datareader(
       des_topic,
       datareader_qos,
       listener,
-      mask);
+      status_mask);
   }
   return true;
 }
