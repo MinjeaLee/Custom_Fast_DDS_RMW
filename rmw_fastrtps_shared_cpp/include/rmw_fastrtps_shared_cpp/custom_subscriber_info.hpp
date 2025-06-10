@@ -95,7 +95,7 @@ public:
       auto ms = std::chrono::duration_cast<std::chrono::milliseconds>(now.time_since_epoch()) % 1000;
       auto time_t = std::chrono::system_clock::to_time_t(now);
       
-      log_file_  << std::put_time(std::localtime(&time_t), "%Y-%m-%d %H:%M:%S") << " ";
+      log_file_  << std::put_time(std::localtime(&time_t), "%Y-%m-%d %H:%M:%S") << "\t";
       log_file_ << message << std::endl;
       log_file_.flush(); // 즉시 디스크에 쓰기
     }
@@ -190,7 +190,7 @@ public:
   {
     std::stringstream ss;
     //! 로그 출력 부 추가
-    ss << "data_available, ";
+    ss << "data_available" << "\t";
     auto topic_desc = reader->get_topicdescription();
     if (topic_desc) {
       ss << topic_desc->get_name();
