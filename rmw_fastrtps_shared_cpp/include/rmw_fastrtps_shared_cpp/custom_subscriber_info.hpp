@@ -101,7 +101,7 @@ public:
     }
     
     //콘솔에도 출력 (디버깅용)
-    std::cout << message << std::endl;
+    // std::cout << message << std::endl;
   }
   
   static void close() {
